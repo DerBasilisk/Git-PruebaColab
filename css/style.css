@@ -197,3 +197,20 @@ footer .redes a:hover{
 
 }
 
+<<<<<<< HEAD
+=======
+.nosotros{
+  font-family: "Work Sans", sans-serif;
+    background-color: #06030a25;
+    color: #fff;
+    padding: 40px 80px;
+    text-align: center;
+}
+.nosotros h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #a59ae0;
+
+  font-family: 'Miniver';
+}
+>>>>>>> 9f7a1e488b097c07d57b0a8ffba07243ab6160a4
