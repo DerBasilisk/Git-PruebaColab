@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #191919;
   background-size: cover;
   background-position: center;
@@ -83,6 +83,37 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #3b141c;
   background-color: #a59ae0;
+}
+
+
+header .barrabuscar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+    width: 30%
+}
+
+header .barrabuscar .buscar{
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: right;
+    border-radius: 15px;
+    border: none;
+    margin: 5px;
+    width: 100%;
+    height: 25px;
+}
+header .barrabuscar .btnbuscar{
+    background-color: #a59ae0;
+    color: #3b141c;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Title */
@@ -316,3 +347,39 @@ h1 {
     background: #252525;
     transform: scale(1.05);
   }
+
+
+/* FOOTER */
+footer{
+    background: #06030a66;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .redes{
+    margin-bottom: 20px;
+}
+
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px;
+    font-size: 20px;
+    transition: .3s;
+
+}
+footer .redes a:hover{
+    background-color: #a59ae0;
+    border-color: #a59ae0;
+    transform: scale(1.1);
+}
