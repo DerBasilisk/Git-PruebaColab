@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #3b141c;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+.container-header{
+  width: 100%;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+ }
+
+.container-header .buscar{
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: right;;
+}
+
+.container-header header{
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+ }
+
+ .container-header header .nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  position: fixed;
+  top: 0;
+  left: 40px;
+  z-index: 99;
+  margin-top: 20px;
+}
+
+.container-header header .logo{
+  font-family: 'Miniver';
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.container-header header ul{
+  display: flex;
+  list-style: none;
+}
+
+.container-header header nav ul li a{
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+   padding: 10px 16px;
+   border-radius: 30px;  
+
+}
+
+.container-header header nav ul li a:hover{
+    color: #3b141c;
+    background-color: #e58c3a;;
+}
+.cafeinicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+}
+
+.cafeinicio-texto {
+  max-width: 50%;
+}
+
+.cafeinicio-texto h3 {
+  font-size: 35px;
+  font-family: "Miniver", sans-serif;
+  color: #f3961c;
+  margin-bottom: 15px;
+}
+
+.cafeinicio-texto h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.cafeinicio-texto p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  background: #f3961c;
+  color: #3b141c;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b96a28;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.cafegrande-img img {
+  max-width: 600px;
+}
