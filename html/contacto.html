@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contáctos.css">
     <title>Document</title>
 </head>
 <body>
+        <div class="container-header">
+    <header>
+        <nav class="nav">
+          <a href="./index.html" class="logo">👨🏿‍💻EShop</a>   
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html/catalogo.html">Catalogo</a></li>
+            <li><a href="./html/contacto.html">Contacto</a></li>
+            <li><a href="./html/galeria.html">Cuenta</a></li>
+          </ul>
+        </nav>
+    </header>
+    </div>
+
+    
+
+    <p>Escribenos, para conocer tus opiniones para mejorar cada dia y ser tu mejor opcion en todo  el mundo</p>
+    <h1>Contáctanos</h1>
+    <form action="procesar.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+        
+        <label for="email">Correo:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="Critica">Critica</label><br>
+        <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+
+    </form>
     
 </body>
 </html>

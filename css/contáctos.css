@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #340b6a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container-header header{
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+ }
+
+ .container-header header .nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  position: fixed;
+  top: 0;
+  left: 40px;
+  z-index: 99;
+  margin-top: 20px;
+}
+
+.container-header header .logo{
+  font-family: 'Miniver';
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.container-header header ul{
+  display: flex;
+  list-style: none;
+}
+
+.container-header header nav ul li a{
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+   padding: 10px 16px;
+   border-radius: 30px;  
+
+}
+
+.container-header header nav ul li a:hover{
+    color: #3b141c;
+    background-color: #a59ae0;;
+}
