@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #3b141c;
+  background-color: #340b6a;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,10 +22,31 @@ html{
   font-weight: bold;
  }
 
-.container-header .buscar{
+.container-header .barrabuscar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+}
+
+.container-header .barrabuscar .buscar{
     background-color: antiquewhite;
     padding: 5px;
-    text-align: right;;
+    text-align: right;
+    border-radius: 15px;
+    border: none;
+    margin: 5px;
+}
+.container-header .barrabuscar .btnbuscar{
+    background-color: #a59ae0;
+    color: #3b141c;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .container-header header{
@@ -75,7 +96,7 @@ html{
 
 .container-header header nav ul li a:hover{
     color: #3b141c;
-    background-color: #e58c3a;;
+    background-color: #a59ae0;;
 }
 .cafeinicio {
   display: flex;
@@ -91,7 +112,7 @@ html{
 .cafeinicio-texto h3 {
   font-size: 35px;
   font-family: "Miniver", sans-serif;
-  color: #f3961c;
+  color: #a59ae0;
   margin-bottom: 15px;
 }
 
@@ -118,7 +139,7 @@ html{
 
 .btn {
   text-decoration: none;
-  background: #f3961c;
+  background: #a59ae0;
   color: #3b141c;
   padding: 12px 25px;
   border-radius: 25px;
@@ -127,7 +148,7 @@ html{
 }
 
 .btn:hover {
-  background: #b96a28;
+  background: #4c3f95;
   color: #fff;
   transform: scale(1.05);
 }
