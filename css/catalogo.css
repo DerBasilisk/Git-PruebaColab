@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
+
+/* General Page Styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carrito #contador{
+  position: absolute;
+  right: 48px;
+  top: 16px;
+  background: rgb(174, 0, 255);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 7px;
+  border-radius: 50%;
+}
+
+.fa-cart-shopping{
+  font-size: 25px;
+  margin-right: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease; color: 0,3s ease;
+}
+.fa-cart-shopping:hover{
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Header */
+header {
+  background: #340b6a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+}
+
+header p {
+  font-family: "Miniver", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-align: center;
+  color: #fff;
+  margin: 0 15px;
+  padding: 10px 16px;
+  transition: .5s;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+header nav ul li a:hover {
+  color: #3b141c;
+  background-color: #a59ae0;
+}
+
+
+header .barrabuscar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+    width: 30%
+}
+
+header .barrabuscar .buscar{
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: right;
+    border-radius: 15px;
+    border: none;
+    margin: 5px;
+    width: 100%;
+    height: 25px;
+}
+header .barrabuscar .btnbuscar{
+    background-color: #a59ae0;
+    color: #3b141c;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: #fff;
+  margin: 120px 0 40px;
+  font-weight: bold;
+}
+
+.h1b{
+    text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: #fff;
+  margin: 50px 0 40px;
+  font-weight: bold;
+  }
+
+
+.linea {
+    width: 80px;
+    height: 3px;
+    background: rgb(174, 0, 255);
+    margin: 0 auto 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+
+/* MENU GCARDS */
+.gcard-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.gcard {
+  background-image: linear-gradient(to right,#291c8d,#4a246f,#340b6a);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 270px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 20px 20px 20px;
+  transition: transform 0.3s ease;
+}
+
+.gcard img {
+  border-radius: 20px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 340px;
+  margin: 0 auto;
+}
+
+.gcard h2 {
+  margin: 10px 0 5px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.gcard p {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+}
+
+.gcard:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons inside gcards */
+.gcard button {
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #a59ae0;
+  color: #3b141c;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 5px;
+}
+
+.gcard button:hover {
+  color: #fff;
+  background: #252525;
+  transform: scale(1.05);
+}
+
+/* MENU ECARDS */
+.ecard-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+  }
+  
+  .ecard {
+    background-image: linear-gradient(to right,#762a8b,#370f4c,#340b6a);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 270px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px 20px 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .ecard img {
+    border-radius: 20px;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 340px;
+    margin: 0 auto;
+  }
+  
+  .ecard h2 {
+    margin: 10px 0 5px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .ecard p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+  }
+  
+  .ecard:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Buttons inside gcards */
+  .ecard button {
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    background: #a59ae0;
+    color: #3b141c;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 5px;
+  }
+  
+  .ecard button:hover {
+    color: #fff;
+    background: #252525;
+    transform: scale(1.05);
+  }
+
+
+/* MENU ECARDS */
+.scard-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+  }
+  
+  .scard {
+    background-image: linear-gradient(to right,#481955,#400560,#7a0fa5);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 270px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px 20px 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .scard img {
+    border-radius: 20px;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 340px;
+    margin: 0 auto;
+  }
+  
+  .scard h2 {
+    margin: 10px 0 5px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .scard p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+  }
+  
+  .scard:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Buttons inside gcards */
+  .scard button {
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    background: #a59ae0;
+    color: #3b141c;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 5px;
+  }
+  
+  .scard button:hover {
+    color: #fff;
+    background: #252525;
+    transform: scale(1.05);
+  }
+
+
+/* FOOTER */
+footer{
+    background: #06030a66;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .redes{
+    margin-bottom: 20px;
+}
+
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px;
+    font-size: 20px;
+    transition: .3s;
+
+}
+footer .redes a:hover{
+    background-color: #a59ae0;
+    border-color: #a59ae0;
+    transform: scale(1.1);
+}

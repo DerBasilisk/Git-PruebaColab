@@ -3,7 +3,7 @@
 body{
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #340b6a;
   background-size: cover;
   background-position: center;
@@ -29,6 +29,7 @@ html{
     padding: 10px 10px;
     background-color: #06030a66;
     border-radius: 25px;
+    width: 30%
 }
 
 .container-header .barrabuscar .buscar{
@@ -38,6 +39,8 @@ html{
     border-radius: 15px;
     border: none;
     margin: 5px;
+    width: 100%;
+    height: 25px;
 }
 .container-header .barrabuscar .btnbuscar{
     background-color: #a59ae0;
@@ -155,4 +158,40 @@ html{
 
 .cafegrande-img img {
   max-width: 600px;
+}
+
+
+/* FOOTER */
+footer{
+    background: #06030a66;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .redes{
+    margin-bottom: 20px;
+}
+
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px;
+    font-size: 20px;
+    transition: .3s;
+
+}
+footer .redes a:hover{
+    background-color: #a59ae0;
+    border-color: #a59ae0;
+    transform: scale(1.1);
 }

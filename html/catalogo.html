@@ -1,11 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThEShop / Catalogo</title>
+  <link rel="stylesheet" href="../css/catalogo.css" />
+  <script src="https://kit.fontawesome.com/467f2bf6a3.js" crossorigin="anonymous"></script>
+  
 </head>
 <body>
-    
+  <header>
+    <p>👨🏿‍💻EShop</p>
+    <form class="barrabuscar" id="search" action="/search" method="get">
+        <input class="buscar" type="text" id="search-input" name="q" placeholder="(fuera de servicio)">
+        <button class="btnbuscar" type="submit">Buscar</button>
+      </form>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./catalogo.html">Catalogo</a></li>
+            <li><a href="./galeria.html">Galeria</a></li>
+          </ul>
+    </nav>
+    <div class="carrito" id="carrito">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="contador">0</span>
+      </div>
+  </header>
+
+  <main>
+
+    <!-- SECCION DE SUSCRIPCIONES -->
+<div class="servicios cacorros">
+    <h1>Suscripciones</h1>
+    <div class="linea"></div>
+    <section class="scard-group">
+
+      <div class="scard">
+        <img src="../img/serv1.png" alt="Bebidas Calientes" />
+        <h2>FilmIn</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="scard">
+        <img src="../img/serv2.png" alt="Bebidas Frías" />
+        <h2>NETFLIX</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="scard">
+        <img src="../img/serv3.png" alt="Refrescos" />
+        <h2>Disney+</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="scard">
+        <img src="../img/serv4.png" alt="Combos Especiales" />
+        <h2>Spotify</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="scard">
+        <img src="../img/serv5.png" alt="Comidas Rápidas" />
+        <h2>HBO MAX</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="scard">
+        <img src="../img/serv6.png" alt="Postres" />
+        <h2>Prime Video</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+    </section>
+</div>
+
+<!-- SECCION DE JUEGOS -->
+    <div class="juegitos cacorros">
+    <h1 class="h1b">Videojuegos</h1>
+    <div class="linea"></div>
+    <section class="gcard-group">
+
+      <div class="gcard">
+        <img src="../img/game1.jpg" alt="Bebidas Calientes" />
+        <h2>Left 4 Dead 2</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <img src="../img/game2.png" alt="Bebidas Frías" />
+        <h2>Counter-Strike: Global Offensive</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <img src="../img/game3.jpg" alt="Refrescos" />
+        <h2>Team Fortress 2</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <img src="../img/game4.jpg" alt="Combos Especiales" />
+        <h2>Dota 2</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <img src="../img/game5.png" alt="Comidas Rápidas" />
+        <h2>DeadLock</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <img src="../img/game6.jpg" alt="Postres" />
+        <h2>Garry's Mod</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+    </section>
+</div>
+
+<!-- SECCION DE Electrodomesticos -->
+    <div class="electricos cacorros">
+    <h1 class="h1b">Electronica</h1>
+    <div class="linea"></div>
+    <section class="ecard-group">
+      <div class="ecard">
+        <img src="../img/elec1.png" alt="Bebidas Calientes" />
+        <h2>Monitores</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="../img/elec2.png" alt="Bebidas Frías" />
+        <h2>Cajones</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="../img/elec3.png" alt="Refrescos" />
+        <h2>Equipos De Sonido</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="../img/elec4.png" alt="Combos Especiales" />
+        <h2>Cascos Sonoros</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="../img/elec5.png" alt="Comidas Rápidas" />
+        <h2>Ratones</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="../img/elec6.png" alt="Postres" />
+        <h2>Teclados</h2>
+        <div class="buttons">
+        <button class="Comprar">Comprar</button>
+        <button class="MasDetalles">Mas Detalles</button>
+        </div>
+      </div>
+    </section>
+</div>
+
+
+
+  </main>
 </body>
+<footer>
+    <div class="redes">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+</footer>
+<script src="../js/script.js"></script>
 </html>
