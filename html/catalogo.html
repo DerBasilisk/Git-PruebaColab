@@ -6,29 +6,39 @@
   <title>ThEShop / Catalogo</title>
   <link rel="stylesheet" href="../css/catalogo.css" />
   <script src="https://kit.fontawesome.com/467f2bf6a3.js" crossorigin="anonymous"></script>
-  
 </head>
 <body>
-  <header>
-    <p>👨🏿‍💻EShop</p>
-    <form class="barrabuscar" id="search" action="/search" method="get">
-        <input class="buscar" type="text" id="search-input" name="q" placeholder="(fuera de servicio)">
-        <button class="btnbuscar" type="submit">Buscar</button>
-      </form>
-    <nav>
+    
+  <div class="container-header">
+    <header>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+      </label>
+      
+      <nav class="nav">
+        <a href="./index.html" class="logo">👨🏿‍💻EShop</a>   
+        
+        <form class="barrabuscar" id="search" action="/search" method="get">
+          <input class="buscar" type="text" id="search-input" name="q" placeholder="(fuera de servicio)">
+          <button class="btnbuscar" type="submit">Buscar</button>
+        </form>
+        
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./catalogo.html">Catalogo</a></li>
-            <li><a href="./galeria.html">Galeria</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-          </ul>
-    </nav>
-    <div class="carrito" id="carrito">
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span id="contador">0</span>
-      </div>
-  </header>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./catalogo.html">Catalogo</a></li>
+          <li><a href="./galeria.html">Galeria</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
 
+        <!-- Carrito ahora está dentro del nav -->
+        <div class="carrito" id="carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="contador">0</span>
+        </div>
+      </nav>
+    </header>
+  </div>
   <main>
 
     <!-- SECCION DE SUSCRIPCIONES -->
