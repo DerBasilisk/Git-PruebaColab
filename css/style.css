@@ -7,7 +7,6 @@ html, body {
 
 body{display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0;
   min-height: 100%;
   background-image: linear-gradient(to bottom,#340b6a,#340b6a,#4f0b6a);
@@ -25,6 +24,18 @@ html{
   scroll-behavior: smooth;
 }
 
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1cb698;
+  margin-left: auto;
+  border-radius: 20px;
+}
 
 .container-header{
   width: 100%;
@@ -177,7 +188,8 @@ html{
 footer{
   background: #06030a66;
   color: #fff;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
   width: 100%;
   margin-top: auto;
@@ -219,4 +231,131 @@ footer .redes a:hover{
     color: #a59ae0;
 
   font-family: 'Miniver';
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:768px){
+  body{
+    width: 100%;
+  }
+  /* HEADER */
+  .container-header header{
+      flex-direction: column;
+      padding: 10px;}
+  .container-header header nav ul{
+      flex-direction: column;
+      gap: 10px;
+  }
+  .container-header header .logo a{
+      font-size: 28px;
+  }
+
+  .container-header .barrabuscar{
+    position: relative;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+    width: 50%;
+    left: -20%;
+
+
+}
+
+  /* SECTION */
+  .cafeinicio{
+      padding-top: 100px;
+      text-align: center;
+  }
+
+  .inicio .container-banner{
+      max-width: 90%;
+      padding: 15px;
+  }
+
+  .inicio.container-banner h1{
+      font-size: 28px;
+  }
+
+  .inicio.container-banner h2{
+      font-size: 14px;
+  }
+
+  .cafeinicio .cafegrande-img img{
+      max-width: 90%;
+  }
+
+  /* REDES */
+
+  .container-banner .redes{
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .footer .redes a{
+      margin: 10px;
+  }
+
+  #menu-toggle{
+      display: none;
+  }
+
+  .menu-icon{
+      display: block;
+      font-size: 28px;
+      cursor: pointer;
+      color: #a59ae0;
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      z-index: 300;
+  }
+
+  .container-header header .nav ul{
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 250;
+  }
+
+  #menu-toggle:checked ~ .nav ul{
+      display: flex;
+  }
+
+  .container-header header .nav ul li {
+      margin: 5px 0;
+  }
+
+  .container-header header .nav ul li a{
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+      text-align: left;
+  }
+}
+
+@media (max-width:480px){
+  .container-header header .logo a{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h1{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h2{
+      font-size: 12px;
+  }
+
+  .footer{
+      padding: 10px 0;
+  }
 }
