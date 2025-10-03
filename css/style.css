@@ -259,23 +259,33 @@ footer .redes a:hover{
     border-radius: 25px;
     width: 50%;
     left: -20%;
+  }
 
+  .cafeinicio-texto {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+  }
 
+  .cafeinicio-texto .buttons{
+    justify-content: center;
 }
 
   /* SECTION */
   .cafeinicio{
       padding-top: 100px;
       text-align: center;
+      flex-direction: column;
   }
 
   .inicio .container-banner{
       max-width: 90%;
       padding: 15px;
+      background-color: #625c6a25;
   }
 
   .inicio.container-banner h1{
-      font-size: 28px;
+      font-size: 38px;
   }
 
   .inicio.container-banner h2{

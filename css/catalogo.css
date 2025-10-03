@@ -16,6 +16,19 @@ html {
   scroll-behavior: smooth;
 }
 
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1cb698;
+  margin-left: auto;
+  border-radius: 20px;
+}
+
 .carrito #contador{
   position: absolute;
   right: 48px;
@@ -57,6 +70,7 @@ header {
 }
 
 header p {
+  text-decoration: none;
   font-family: "Miniver", sans-serif;
   font-size: 36px;
   color: #fff;
@@ -169,8 +183,7 @@ h1 {
 .gcard img {
   border-radius: 20px;
   object-fit: cover;
-  max-width: 100%;
-  max-height: 340px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -237,8 +250,7 @@ h1 {
   .ecard img {
     border-radius: 20px;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 340px;
+    max-width: 90%;
     margin: 0 auto;
   }
   
@@ -306,8 +318,7 @@ h1 {
   .scard img {
     border-radius: 20px;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 340px;
+    max-width: 90%;
     margin: 0 auto;
   }
   
@@ -382,4 +393,116 @@ footer .redes a:hover{
     background-color: #a59ae0;
     border-color: #a59ae0;
     transform: scale(1.1);
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:768px){
+  body{
+    width: 100%;
+  }
+  /* HEADER */
+  .container-header header{
+      flex-direction: column;
+      padding: 10px;}
+  .container-header header nav ul{
+      flex-direction: column;
+      gap: 10px;
+  }
+  .container-header header .logo a{
+      font-size: 28px;
+  }
+
+  .container-header .barrabuscar{
+    position: relative;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+    width: 50%;
+    left: -20%;
+  }
+  .ecard, .scard, .gcard {
+    width: 35%;       /* 2 por fila */
+    height: auto;     /* que crezcan según el contenido */
+    padding: 15px;
+  }
+
+  .ecard button, .scard button, .gcard button{
+    width: 45%;       /* 2 por fila */
+    height: auto;     /* que crezcan según el contenido */
+    padding: 15px;
+  }
+  /* REDES */
+
+  .container-banner .redes{
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .footer .redes a{
+      margin: 10px;
+  }
+
+  #menu-toggle{
+      display: none;
+  }
+
+  .menu-icon{
+      display: block;
+      font-size: 28px;
+      cursor: pointer;
+      color: #a59ae0;
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      z-index: 300;
+  }
+
+  .container-header header .nav ul{
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 250;
+  }
+
+  #menu-toggle:checked ~ .nav ul{
+      display: flex;
+  }
+
+  .container-header header .nav ul li {
+      margin: 5px 0;
+  }
+
+  .container-header header .nav ul li a{
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+      text-align: left;
+  }
+}
+
+@media (max-width:480px){
+  .container-header header .logo a{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h1{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h2{
+      font-size: 12px;
+  }
+
+  .footer{
+      padding: 10px 0;
+  }
 }
