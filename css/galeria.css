@@ -1,9 +1,10 @@
+/* ====== CONFIGURACIÓN GENERAL ====== */
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
 
 body{
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #340b6a;
   background-size: cover;
   background-position: center;
@@ -30,6 +31,7 @@ html{
     padding: 10px 10px;
     background-color: #06030a66;
     border-radius: 25px;
+    width: 30%
 }
 
 .container-header .barrabuscar .buscar{
@@ -39,6 +41,8 @@ html{
     border-radius: 15px;
     border: none;
     margin: 5px;
+    width: 100%;
+    height: 25px;
 }
 .container-header .barrabuscar .btnbuscar{
     background-color: #a59ae0;
@@ -100,202 +104,140 @@ html{
     background-color: #a59ae0;;
 }
 
-/* ===== galeria body ===== */
-h1{
+/* ====== GALERÍA ====== */
+main {
+    padding-top: 100px; /* Espacio para que el header fijo no tape el contenido */
+}
+
+h1 {
     text-align: center;
     font-family: "Work Sans", sans-serif;
     color: #fff;
-    margin: 120px 0;
-    
+    font-weight: bold;
+    margin: 40px 0; /* Margen simplificado */
+    margin-top: 100px;
 }
 
-
-  .galeria{
+.galeria {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-  }
+    max-width: 1200px;
+    margin: auto;
+}
 
-  .galeria img {
-    width: 100%;
-    height: auto;
+.box {
     border-radius: 10px;
-    box-shadow: #340b6a 0px 4px 8px;
-    object-fit:fill;
-  }
-  
-  .box {
-    background: #f9f9f9;       /* fondo de la caja */
-    border-radius: 10px;        /* esquinas redondeadas */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* sombra */
-    overflow: hidden;           /* para que la imagen no se salga */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Clave para que la imagen respete los bordes redondeados */
     transition: transform 0.3s;
-  }
-  
-  .box:hover {
-    transform: scale(1.05);     /* efecto zoom */
-  }
-  
-  .box img {
+}
+
+.box:hover {
+    transform: scale(1.05); /* efecto zoom */
+}
+
+.box img {
     width: 100%;
-    height: 400px;
-    object-fit:fill;
-  }
-  
-  
-
-
+    height: 350px;
+    display: block; /* Evita espacios indeseados debajo de la imagen */
+    object-fit: cover; /* ARREGLO CLAVE: Evita que la imagen se deforme */
+}
 
 /* ====== MENÚ RESPONSIVE ====== */
+#menu-toggle {
+    display: none;
+}
 
 .menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #fff;
-  padding: 8px;
-}
-
-/* Ocultar checkbox por defecto */
-#menu-toggle {
-  display: none;
+    display: none; /* Oculto por defecto */
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
 }
 
 @media (max-width: 768px) {
-  /* Mostrar icono hamburguesa */
-  .menu-icon {
-    display: block;
-  }
+    .nav ul {
+        display: none;
+        position: absolute;
+        top: 100%; /* Se posiciona justo debajo del header */
+        left: 0;
+        width: 100%;
+        background: #3b141c;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
 
-  /* Ocultar menú de escritorio */
-  .container-header header nav ul {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #3b141c;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    z-index: 98;
-  }
+    /* Selector corregido para mostrar el menú */
+    #menu-toggle:checked ~ .nav ul {
+        display: flex;
+    }
 
-  /* Mostrar menú cuando checkbox esté activado */
-  #menu-toggle:checked + .menu-icon + nav ul {
-    display: flex;
-  }
+    .nav ul li {
+        margin: 10px 0;
+    }
 
-  .container-header header nav ul li {
-    margin: 10px 0;
-  }
+    .menu-icon {
+        display: block; /* Se muestra en pantallas pequeñas */
+    }
 
-  .container-header header nav ul li a {
-    font-size: 18px;
-    padding: 10px 20px;
-  }
-
-  /* Ajustar header */
-  .container-header header {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-}
-
-/* ====== HERO SECTION RESPONSIVE ====== */
-
-@media (max-width: 768px) {
-  .cafee {
-    flex-direction: column;
-    padding: 120px 20px 40px;
-    text-align: center;
-    height: auto;
-  }
-
-  .cafee .hero-text {
-    max-width: 100%;
-  }
-
-  .hero-text h1 {
-    font-size: 26px;
-  }
-
-  .hero-text h3 {
-    font-size: 20px;
-  }
-
-  .hero-text p {
-    font-size: 15px;
-  }
-
-  .hero-text .btn {
-    font-size: 16px;
-    margin: 10px 5px;
-  }
-
-  .hero-image-container img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
+    .barrabuscar {
+        display: none; /* Opcional: ocultar la barra de búsqueda en móvil */
+    }
 }
 
 /* ========== GALERÍA RESPONSIVE ========== */
-
 @media (max-width: 992px) {
-  .galeria {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .box img {
-    height: 250px;
-    align-items: end;
-  }
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box img {
+        height: 250px;
+    }
 }
 
 @media (max-width: 600px) {
-  .galeria {
-    grid-template-columns: 1fr;
-  }
-
-  .box img {
-    height: 200px;
-  }
-
-  h1.title-projects {
-    font-size: 24px;
-    margin-top: 140px;
-  }
-
-
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+    .box img {
+        height: 200px;
+    }
 }
 
-header {
-  display: flex;
-  align-items: center;
-  /* Para que los elementos ocupen todo el espacio entre sí */
-  justify-content: flex-start;
-  gap: 20px; /* para separación */
-  position: relative;
+/* ====== FOOTER ====== */
+footer {
+    background: #06030a66;
+    color: #fff;
+    padding: 20px 15px;
+    text-align: center;
+    margin-top: 40px; /* Separación del contenido */
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-/* Logo: */
-.logo {
-  flex-shrink: 0; /* que no se reduzca */
+footer .redes {
+    margin-bottom: 20px;
 }
 
-/* El input checkbox oculto */
-#menu-toggle {
-  display: none;
+footer .redes a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: .3s;
 }
 
-/* Aquí ponemos la clave para el menú hamburguesa */
-.menu-icon {
-  margin-left: auto; /* empuja al máximo a la derecha */
-  cursor: pointer;
-  font-size: 28px;
-  color: #fff;
-  z-index: 100; /* para que quede por encima */
-  user-select: none;
+footer .redes a:hover {
+    background-color: #a59ae0;
+    border-color: #a59ae0;
+    transform: scale(1.1);
 }
