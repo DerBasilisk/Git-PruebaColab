@@ -1,15 +1,25 @@
 /* ====== CONFIGURACIÓN GENERAL ====== */
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
 
-body{
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+}
+
+body{display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
   min-height: 100%;
   background-color: #340b6a;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+main {
+  flex: 1;
 }
 
 html{
@@ -208,22 +218,22 @@ h1 {
     }
 }
 
-/* ====== FOOTER ====== */
-footer {
+/* FOOTER */
+
+footer{
     background: #06030a66;
     color: #fff;
-    padding: 20px 15px;
+    padding: 15px;
     text-align: center;
-    margin-top: 40px; /* Separación del contenido */
     width: 100%;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
-footer .redes {
+    margin-top: auto;
+  }
+  
+  footer .redes{
     margin-bottom: 20px;
-}
-
-footer .redes a {
+  }
+  
+  footer .redes a{
     color: #fff;
     display: inline-block;
     border: 1px solid #fff;
@@ -231,13 +241,13 @@ footer .redes a {
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 0 10px;
+    margin: 20px;
     font-size: 20px;
     transition: .3s;
-}
-
-footer .redes a:hover {
+  
+  }
+  footer .redes a:hover{
     background-color: #a59ae0;
     border-color: #a59ae0;
     transform: scale(1.1);
-}
+  }
