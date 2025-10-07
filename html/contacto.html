@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/contáctos.css">
     <title>Document</title>
 </head>
 <body>
-        <div class="container-header">
+    <div class="container-header">
     <header>
         <nav class="nav">
           <a href="./index.html" class="logo">👨🏿‍💻EShop</a>   
+          <form class="barrabuscar" id="search" action="/search" method="get">
+            <input class="buscar" type="text" id="search-input" name="q" placeholder="(fuera de servicio)">
+            <button class="btnbuscar" type="submit">Buscar</button>
+          </form>
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="./catalogo.html">Catalogo</a></li>
@@ -23,12 +28,13 @@
 
     
 
-    <p>Escribenos, para conocer tus opiniones para mejorar cada dia y ser tu mejor opcion en todo  el mundo</p>
-    <h1>Contáctanos</h1>
+    <h2>Contáctanos</h2>
+    <div class="palito"></div>
+     <p>Escribenos, para conocer tus opiniones para mejorar cada dia y ser tu mejor opcion en todo  el mundo</p>
     <form action="procesar.php" method="POST">
         <label for="nombre">Nombre:</label><br>
         <input type="text" name="nombre" id="nombre" required><br><br>
-        
+
         <label for="email">Correo:</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
@@ -36,10 +42,41 @@
         <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
 
         <button type="submit">Enviar</button>
-
-        
-
     </form>
+   
     
+<footer class="footer">
+
+    <!--columna izq-->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Eshop</a></li>
+        <li><a href="#">Politica privada</a></li>
+        <li><a href="#">Quality Policy</a></li>
+      </ul>
+    </div>
+
+  <!--colunma centro-->
+  <div class="footer-center">
+    <h2 class="logo">👨🏿‍💻EShop</h2>
+    <div class="palitofooter"></div>
+    <div class="redes">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+  <!--columna dere-->
+  <div class="footer-col">
+    <ul>
+      <li><a href="#">Eshopmultimedia@gmaill.com</a></li>
+      <li><a href="#">Telefono +57 3109004556</a></li>
+    </ul>
+  </div>
+  
+</footer>
 </body>
+
+
 </html>

@@ -1,104 +1,279 @@
-@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
-
-body{
+/* ---------- RESET ---------- */
+* {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background-color: #340b6a;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 
-.container-header header{
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
- }
-
- .container-header header .nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 96%;
-  position: fixed;
-  top: 0;
-  left: 40px;
-  z-index: 99;
-  margin-top: 20px;
+/* ---------- HEADER ---------- */
+.container-header {
+  background-color: #320a63; /* color principal morado */
+  padding: 15px 0;
 }
 
-.container-header header .logo{
-  font-family: 'Miniver';
-  font-size: 36px;
+header {
+  width: 100%;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+  font-family: "Righteous", cursive;
+  font-size: 2rem;
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.container-header header ul{
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- BARRA DE BÚSQUEDA ---------- */
+/* CONTENEDOR DE LA BARRA */
+.barrabuscar {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a0652; /* morado oscuro */
+  padding: 6px;
+  border-radius: 50px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+/* CAMPO DE TEXTO */
+.buscar {
+  background-color: #f7ecdd; /* color crema */
+  border: none;
+  outline: none;
+  border-radius: 40px 0 0 40px;
+  padding: 12px 18px;
+  width: 320px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.buscar::placeholder {
+  color: #7a7a7a;
+}
+
+/* BOTÓN */
+.btnbuscar {
+  background-color: #9467cc; /* lila */
+  color: white;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnbuscar:hover {
+  background-color: #a87ee9;
+}
+
+
+/* ---------- NAVEGACIÓN ---------- */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #ffda79;
+}
+
+/* ---------- FORMULARIO CONTACTO ---------- */
+h2 {
+  text-align: center;
+  color: #320a63;
+  margin-top: 60px;
+  font-size: 2rem;
+}
+
+.palito {
+  width: 90px;
+  height: 4px;
+  background-color: #8064c2;
+  border-radius: 3px;
+  margin: 10px auto 20px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+form {
+  background: #fff;
+  max-width: 450px;
+  margin: 0 auto 100px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #8064c2;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #9066c3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 25px auto 0;
+}
+
+button[type="submit"]:hover {
+  background-color: #4a1b94;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #24064b;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.footer-col ul {
   list-style: none;
 }
 
-.container-header header nav ul li a{
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffda79;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-center .logo {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.palitofooter {
+  width: 70px;
+  height: 3px;
+  background-color: #8064c2;
+  margin: 8px auto 15px auto;
+  border-radius: 3px;
+}
+
+.redes a {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.redes a:hover {
+  color: #ffda79;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 950px) {
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buscar {
+    width: 250px;
+  }
+
+  .nav ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
     text-align: center;
-    color: #fff;
-    margin: 0 15px;
-    padding: 3px;
-    transition: .5s;
-    text-decoration: none;
-   padding: 10px 16px;
-   border-radius: 30px;  
-
+  }
 }
 
-.container-header header nav ul li a:hover{
-    color: #3b141c;
-    background-color: #a59ae0;;
-}
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 170px;
-    margin: 20px ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-}
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-input[type="text"],
 
-input[type="email"],
 
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-button {
-    background-color: #340b6a;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #340b6a;
-    
 
-}
+
+
+
+
+  
+
+
+
+
 
 
