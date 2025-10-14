@@ -16,10 +16,150 @@ html {
   scroll-behavior: smooth;
 }
 
-.carrito #contador{
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1cb698;
+  margin-left: auto;
+  border-radius: 20px;
+}
+
+
+
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1cb698;
+  margin-left: auto;
+  border-radius: 20px;
+}
+/* HEADER */
+.container-header {
+  position: fixed;
+  background-color: #340b6a;
+  top: 0px;
+  height: 100px;
+  width: 100%;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+  align-content: center;
+}
+
+.container-header header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.container-header header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* LOGO */
+.container-header .logo {
+  font-family: 'Miniver';
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* BARRA DE BUSQUEDA */
+.container-header .barrabuscar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #06030a66;
+  border-radius: 25px;
+  width: 30%;
+  margin: 0 20px;
+}
+
+.container-header .barrabuscar .buscar {
+  background-color: antiquewhite;
+  padding: 5px;
+  text-align: right;
+  border-radius: 15px;
+  border: none;
+  margin: 5px;
+  width: 100%;
+  height: 25px;
+}
+
+.container-header .barrabuscar .btnbuscar {
+  background-color: #a59ae0;
+  color: #3b141c;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* NAV LINKS */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-align: center;
+  color: #fff;
+  padding: 10px 16px;
+  transition: .5s;
+  text-decoration: none;
+  border-radius: 30px;  
+}
+
+.nav ul li a:hover {
+  color: #3b141c;
+  background-color: #a59ae0;
+}
+
+/* CARRITO */
+.carrito {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  left: -75px;
+}
+
+.carrito i {
+  font-size: 25px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.carrito i:hover {
+  transform: scale(1.2);
+}
+
+.carrito #contador {
   position: absolute;
-  right: 48px;
-  top: 16px;
+  top: -25px;
+  right: -38px;
   background: rgb(174, 0, 255);
   color: white;
   font-size: 12px;
@@ -27,93 +167,19 @@ html {
   padding: 4px 7px;
   border-radius: 50%;
 }
-
 .fa-cart-shopping{
+  position: absolute;
   font-size: 25px;
   margin-right: 40px;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 0.3s ease; color: 0,3s ease;
+  transition: transform 0.3s ease; 
+  color: 0,3s ease;
 }
+
 .fa-cart-shopping:hover{
   color: white;
   transform: scale(1.2);
-}
-
-/* Header */
-header {
-  background: #340b6a;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  font-family: "Work Sans", sans-serif;
-  font-weight: bold;
-}
-
-header p {
-  font-family: "Miniver", sans-serif;
-  font-size: 36px;
-  color: #fff;
-  margin: 0;
-}
-
-header nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li a {
-  text-align: center;
-  color: #fff;
-  margin: 0 15px;
-  padding: 10px 16px;
-  transition: .5s;
-  text-decoration: none;
-  border-radius: 30px;
-}
-
-header nav ul li a:hover {
-  color: #3b141c;
-  background-color: #a59ae0;
-}
-
-
-header .barrabuscar{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 10px;
-    background-color: #06030a66;
-    border-radius: 25px;
-    width: 30%
-}
-
-header .barrabuscar .buscar{
-    background-color: antiquewhite;
-    padding: 5px;
-    text-align: right;
-    border-radius: 15px;
-    border: none;
-    margin: 5px;
-    width: 100%;
-    height: 25px;
-}
-header .barrabuscar .btnbuscar{
-    background-color: #a59ae0;
-    color: #3b141c;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 /* Title */
@@ -164,13 +230,13 @@ h1 {
   text-align: center;
   padding: 10px 20px 20px 20px;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .gcard img {
   border-radius: 20px;
   object-fit: cover;
-  max-width: 100%;
-  max-height: 340px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -232,13 +298,13 @@ h1 {
     text-align: center;
     padding: 10px 20px 20px 20px;
     transition: transform 0.3s ease;
+    z-index: 1;
   }
   
   .ecard img {
     border-radius: 20px;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 340px;
+    max-width: 90%;
     margin: 0 auto;
   }
   
@@ -301,13 +367,13 @@ h1 {
     text-align: center;
     padding: 10px 20px 20px 20px;
     transition: transform 0.3s ease;
+    z-index: 1;
   }
   
   .scard img {
     border-radius: 20px;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 340px;
+    max-width: 90%;
     margin: 0 auto;
   }
   
@@ -351,35 +417,156 @@ h1 {
 
 /* FOOTER */
 footer{
-    background: #06030a66;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  background: #06030a66;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 footer .redes{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 footer .redes a{
-    color: #fff;
-    display: inline-block;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 20px;
-    font-size: 20px;
-    transition: .3s;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 20px;
+  font-size: 20px;
+  transition: .3s;
 
 }
 footer .redes a:hover{
-    background-color: #a59ae0;
-    border-color: #a59ae0;
-    transform: scale(1.1);
+  background-color: #a59ae0;
+  border-color: #a59ae0;
+  transform: scale(1.1);
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:768px){
+  body{
+    width: 100%;
+  }
+  /* HEADER */
+  .container-header header{
+      flex-direction: column;
+      padding: 10px;}
+  .container-header header nav ul{
+      flex-direction: column;
+      gap: 10px;
+  }
+  .container-header header .logo a{
+      font-size: 28px;
+  }
+
+  .container-header .barrabuscar{
+    position: relative;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+    width: 50%;
+    left: -20%;
+  }
+  .ecard, .scard, .gcard {
+    width: 35%;       /* 2 por fila */
+    height: auto;     /* que crezcan según el contenido */
+    padding: 15px;
+  }
+
+  .ecard button, .scard button, .gcard button{
+    width: 100%;
+  }
+  /* REDES */
+
+  .container-banner .redes{
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .footer .redes a{
+      margin: 10px;
+  }
+
+  #menu-toggle{
+      display: none;
+  }
+
+  .menu-icon{
+      display: block;
+      font-size: 28px;
+      cursor: pointer;
+      color: #a59ae0;
+      position: absolute;
+      right: 20px;
+      top: 35px;
+      z-index: 300;
+  }
+
+  .container-header header .nav ul{
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 250;
+  }
+
+  #menu-toggle:checked ~ .nav ul{
+      display: flex;
+  }
+
+  .container-header header .nav ul li {
+      margin: 5px 0;
+  }
+
+  .container-header header .nav ul li a{
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+      text-align: left;
+  }
+  .container-header .barrabuscar{
+    position: relative;
+    width: 40%;
+    left: -10%;
+  }
+
+  .carrito{
+    position: relative;
+    left: -122px;
+  }
+
+
+}
+
+@media (max-width:480px){
+  .container-header header .logo a{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h1{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h2{
+      font-size: 12px;
+  }
+
+  .footer{
+      padding: 10px 0;
+  }
 }

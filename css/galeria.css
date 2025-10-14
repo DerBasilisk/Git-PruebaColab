@@ -1,15 +1,25 @@
 /* ====== CONFIGURACIÓN GENERAL ====== */
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
 
-body{
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+}
+
+body{display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
   min-height: 100%;
-  background-color: #340b6a;
+  background: linear-gradient(#060606, #141422);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+main {
+  flex: 1;
 }
 
 html{
@@ -17,6 +27,18 @@ html{
 }
 
 
+#menu-toggle{
+    display: none;
+  }
+  
+  .menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1cb698;
+    margin-left: auto;
+    border-radius: 20px;
+  }
 
 .container-header{
   width: 100%;
@@ -118,112 +140,55 @@ h1 {
     margin-top: 100px;
 }
 
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    width: 700px;
+    height: 800px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .box {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Clave para que la imagen respete los bordes redondeados */
-    transition: transform 0.3s;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: flex 0.5s ease-in-out;
 }
 
 .box:hover {
-    transform: scale(1.05); /* efecto zoom */
+    flex: 5;
 }
 
-.box img {
-    width: 100%;
-    height: 350px;
-    display: block; /* Evita espacios indeseados debajo de la imagen */
-    object-fit: cover; /* ARREGLO CLAVE: Evita que la imagen se deforme */
+.galeria:has(.box:hover) .box:not(:hover) .img{
+    filter: grayscale(100%);
 }
 
-/* ====== MENÚ RESPONSIVE ====== */
-#menu-toggle {
-    display: none;
-}
 
-.menu-icon {
-    display: none; /* Oculto por defecto */
-    font-size: 28px;
-    cursor: pointer;
-    color: #fff;
-    user-select: none;
-}
+/* FOOTER */
 
-@media (max-width: 768px) {
-    .nav ul {
-        display: none;
-        position: absolute;
-        top: 100%; /* Se posiciona justo debajo del header */
-        left: 0;
-        width: 100%;
-        background: #3b141c;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
-    }
-
-    /* Selector corregido para mostrar el menú */
-    #menu-toggle:checked ~ .nav ul {
-        display: flex;
-    }
-
-    .nav ul li {
-        margin: 10px 0;
-    }
-
-    .menu-icon {
-        display: block; /* Se muestra en pantallas pequeñas */
-    }
-
-    .barrabuscar {
-        display: none; /* Opcional: ocultar la barra de búsqueda en móvil */
-    }
-}
-
-/* ========== GALERÍA RESPONSIVE ========== */
-@media (max-width: 992px) {
-    .galeria {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .box img {
-        height: 250px;
-    }
-}
-
-@media (max-width: 600px) {
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-    .box img {
-        height: 200px;
-    }
-}
-
-/* ====== FOOTER ====== */
-footer {
+footer{
     background: #06030a66;
     color: #fff;
-    padding: 20px 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
-    margin-top: 40px; /* Separación del contenido */
     width: 100%;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
-footer .redes {
+    margin-top: auto;
+  }
+  
+  footer .redes{
     margin-bottom: 20px;
-}
-
-footer .redes a {
+  }
+  
+  footer .redes a{
     color: #fff;
     display: inline-block;
     border: 1px solid #fff;
@@ -231,13 +196,183 @@ footer .redes a {
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 0 10px;
+    margin: 20px;
     font-size: 20px;
     transition: .3s;
-}
-
-footer .redes a:hover {
+  
+  }
+  footer .redes a:hover{
     background-color: #a59ae0;
     border-color: #a59ae0;
     transform: scale(1.1);
+  }
+  
+  .nosotros{
+    font-family: "Work Sans", sans-serif;
+      background-color: #06030a25;
+      color: #fff;
+      padding: 40px 80px;
+      text-align: center;
+  }
+  .nosotros h2{
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #a59ae0;
+  
+    font-family: 'Miniver';
+  }
+  
+  
+  /* Responsive */
+  
+  @media screen and (max-width:768px){
+    body{
+      width: 100%;
+    }
+    /* HEADER */
+    .container-header header{
+        flex-direction: column;
+        padding: 10px;}
+    .container-header header nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container-header header .logo a{
+        font-size: 28px;
+    }
+  
+    .container-header .barrabuscar{
+      position: relative;
+      padding: 10px 10px;
+      background-color: #06030a66;
+      border-radius: 25px;
+      width: 50%;
+      left: -20%;
+  
+  
+  }
+  
+    /* SECTION */
+    .cafeinicio{
+        padding-top: 100px;
+        text-align: center;
+    }
+  
+    .inicio .container-banner{
+        max-width: 90%;
+        padding: 15px;
+    }
+  
+    .inicio.container-banner h1{
+        font-size: 28px;
+    }
+  
+    .inicio.container-banner h2{
+        font-size: 14px;
+    }
+  
+    .cafeinicio .cafegrande-img img{
+        max-width: 90%;
+    }
+  
+    /* REDES */
+  
+    .container-banner .redes{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+  
+    .footer .redes a{
+        margin: 10px;
+    }
+  
+    #menu-toggle{
+        display: none;
+    }
+  
+    .menu-icon{
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #a59ae0;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        z-index: 300;
+    }
+  
+    .container-header header .nav ul{
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        z-index: 250;
+    }
+  
+    #menu-toggle:checked ~ .nav ul{
+        display: flex;
+    }
+  
+    .container-header header .nav ul li {
+        margin: 5px 0;
+    }
+  
+    .container-header header .nav ul li a{
+        color: #fff;
+        padding: 10px 15px;
+        display: block;
+        text-align: left;
+    }
+  }
+  
+  @media (max-width:480px){
+    .container-header header .logo a{
+        font-size: 22px;
+    }
+  
+    .inicio.container-banner h1{
+        font-size: 22px;
+    }
+  
+    .inicio.container-banner h2{
+        font-size: 12px;
+    }
+  
+    .footer{
+        padding: 10px 0;
+    }
+  }
+
+  /* ========== GALERÍA RESPONSIVE ========== */
+
+/* Para pantallas medianas (tabletas o laptops pequeñas) */
+@media (max-width: 992px) {
+    .galeria {
+        /* Cambia la cuadrícula a 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box img {
+        /* Ajusta la altura de las imágenes para este tamaño */
+        height: 250px;
+    }
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+    .galeria {
+        /* Cambia la cuadrícula a 1 sola columna */
+        grid-template-columns: 1fr;
+    }
+
+    .box img {
+        /* Reduce aún más la altura para adaptarse a pantallas más pequeñas */
+        height: 200px;
+    }
 }

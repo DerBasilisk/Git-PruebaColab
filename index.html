@@ -12,11 +12,16 @@
     
     <div class="container-header">
     <header>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+      </label>
+      
         <nav class="nav">
           <a href="./index.html" class="logo">👨🏿‍💻EShop</a>   
-          <form class="barrabuscar" id="search" action="/search" method="get">
-            <input class="buscar" type="text" id="search-input" name="q" placeholder="(fuera de servicio)">
-            <button class="btnbuscar" type="submit">Buscar</button>
+          <form class="barrabuscar" onsubmit="return false;">
+            <input type="text" id="buscarInput" class="buscar" placeholder="Buscar en catálogo...">
+            <button type="button" class="btnbuscar" onclick="filtrarCatalogo()">Buscar</button>
           </form>
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -44,13 +49,11 @@
       <img src="./img/3361624.png" alt="Café">
     </div>
   </section>
-  <section class="textoso">
     <div class="nosotros">
         <h2>Nosotros</h2>
         <p>ThEShop es una plataforma de compras en linea que ofrece una amplia variedad de productos de alta calidad a precios competitivos. Nuestro objetivo es brindar a nuestros clientes una experiencia de compra excepcional, con un enfoque en la satisfacción del cliente y la conveniencia.</p>
         <p>En ThEShop, nos enorgullece ofrecer una amplia gama de productos, desde electrónica y moda hasta artículos para el hogar y juguetes. Trabajamos con proveedores confi
       </div>
-  </section>
   
 </body>
 <footer>
@@ -62,4 +65,5 @@
         <a href="#"><i class="fa-brands fa-telegram"></i></a>
     </div>
 </footer>
+<script src="../js/busqueda.js"></script>
 </html>

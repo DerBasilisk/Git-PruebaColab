@@ -1,20 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Work+Sans&display=swap');
 
-body{
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+}
+
+body{display: flex;
+  flex-direction: column;
+  margin: 0;
   min-height: 100%;
-  background-color: #340b6a;
+  background-image: linear-gradient(to bottom,#340b6a,#340b6a,#4f0b6a);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
+main {
+  flex: 1;
+}
+
 html{
   scroll-behavior: smooth;
 }
 
+#menu-toggle{
+  display: none;
+}
+
+.menu-icon{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1cb698;
+  margin-left: auto;
+  border-radius: 20px;
+}
 
 
 .container-header{
@@ -162,44 +183,42 @@ html{
 }
 
 
+
 /* FOOTER */
+
 footer{
-    background: #06030a66;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  background: #06030a66;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 footer .redes{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 footer .redes a{
-    color: #fff;
-    display: inline-block;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 20px;
-    font-size: 20px;
-    transition: .3s;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 20px;
+  font-size: 20px;
+  transition: .3s;
 
 }
 footer .redes a:hover{
-    background-color: #a59ae0;
-    border-color: #a59ae0;
-    transform: scale(1.1);
-
+  background-color: #a59ae0;
+  border-color: #a59ae0;
+  transform: scale(1.1);
 }
 
-<<<<<<< HEAD
-=======
 .nosotros{
   font-family: "Work Sans", sans-serif;
     background-color: #06030a25;
@@ -214,4 +233,140 @@ footer .redes a:hover{
 
   font-family: 'Miniver';
 }
->>>>>>> 9f7a1e488b097c07d57b0a8ffba07243ab6160a4
+
+
+/* Responsive */
+
+@media screen and (max-width:768px){
+  body{
+    width: 100%;
+  }
+  /* HEADER */
+  .container-header header{
+      flex-direction: column;
+      padding: 10px;}
+  .container-header header nav ul{
+      flex-direction: column;
+      gap: 10px;
+  }
+  .container-header header .logo a{
+      font-size: 28px;
+  }
+
+  .container-header .barrabuscar{
+    position: relative;
+    padding: 10px 10px;
+    background-color: #06030a66;
+    border-radius: 25px;
+    width: 50%;
+    left: -20%;
+  }
+
+  .cafeinicio-texto {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .cafeinicio-texto .buttons{
+    justify-content: center;
+}
+
+  /* SECTION */
+  .cafeinicio{
+      padding-top: 100px;
+      text-align: center;
+      flex-direction: column;
+  }
+
+  .inicio .container-banner{
+      max-width: 90%;
+      padding: 15px;
+      background-color: #625c6a25;
+  }
+
+  .inicio.container-banner h1{
+      font-size: 38px;
+  }
+
+  .inicio.container-banner h2{
+      font-size: 14px;
+  }
+
+  .cafeinicio .cafegrande-img img{
+      max-width: 90%;
+  }
+
+  /* REDES */
+
+  .container-banner .redes{
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .footer .redes a{
+      margin: 10px;
+  }
+
+  #menu-toggle{
+      display: none;
+  }
+
+  .menu-icon{
+      display: block;
+      font-size: 28px;
+      cursor: pointer;
+      color: #a59ae0;
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      z-index: 300;
+  }
+
+  .container-header header .nav ul{
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 250;
+  }
+
+  #menu-toggle:checked ~ .nav ul{
+      display: flex;
+  }
+
+  .container-header header .nav ul li {
+      margin: 5px 0;
+  }
+
+  .container-header header .nav ul li a{
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+      text-align: left;
+  }
+}
+
+@media (max-width:480px){
+  .container-header header .logo a{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h1{
+      font-size: 22px;
+  }
+
+  .inicio.container-banner h2{
+      font-size: 12px;
+  }
+
+  .footer{
+      padding: 10px 0;
+  }
+}
