@@ -48,21 +48,20 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #2a0652; /* morado oscuro */
-  padding: 6px;
+  padding: 0px 25px;
   border-radius: 50px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-  width: fit-content;
+  width: 400px;
   margin: 0 auto; /* Centra horizontalmente */
 }
 
 /* CAMPO DE TEXTO */
-.buscar {
+.barrabuscar .buscar {
   background-color: #f7ecdd; /* color crema */
   border: none;
-  outline: none;
   border-radius: 40px 0 0 40px;
   padding: 12px 18px;
-  width: 320px;
+  width: 70%;
   font-size: 1rem;
   color: #333;
 }
@@ -72,16 +71,17 @@ header {
 }
 
 /* BOTÓN */
-.btnbuscar {
+.barrabuscar .btnbuscar {
   background-color: #9467cc; /* lila */
   color: white;
   border: none;
   border-radius: 0 40px 40px 0;
-  padding: 12px 25px;
   font-weight: bold;
   font-size: 0.95rem;
-  cursor: pointer;
   transition: all 0.3s ease;
+  width: 35%;
+  height: 42.8px;
+  margin-bottom: 16.8px;
 }
 
 .btnbuscar:hover {
